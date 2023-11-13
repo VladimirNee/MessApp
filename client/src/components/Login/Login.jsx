@@ -93,7 +93,7 @@ const Login = () => {
           <Button colorScheme="teal" type="submit">
             Log In
           </Button>
-          <Button colorScheme='gray.50' onClick={() => navigate("/register")}>
+          <Button onClick={() => navigate("/register")}>
             Create Account
           </Button>
         </ButtonGroup>

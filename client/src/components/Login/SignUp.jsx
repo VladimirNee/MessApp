@@ -91,7 +91,7 @@ const SignUp = () => {
         />
 
         <ButtonGroup pt="1rem">
-          <Button colorScheme='gray.50' onClick={() => navigate("/")} leftIcon={<ArrowBackIcon />}>
+          <Button onClick={() => navigate("/")} leftIcon={<ArrowBackIcon />}>
             Back
           </Button>
           <Button colorScheme="teal" type="submit">

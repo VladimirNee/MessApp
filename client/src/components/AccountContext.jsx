@@ -10,6 +10,7 @@ const UserContext = ({ children }) => {
   });
   const navigate = useNavigate();
   const local = import.meta.env.VITE_SERVER_URL;
+  
   useEffect(() => {
     fetch(`${local}/auth/login`, {
       credentials: "include",

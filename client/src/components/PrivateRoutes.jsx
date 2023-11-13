@@ -6,7 +6,6 @@ import { Outlet, Navigate } from 'react-router'
 const useAuth = () => {
   const { user } = useContext(AccountContext);
   console.log('user', user)
-
   return user && user.loggedIn;
 };
 

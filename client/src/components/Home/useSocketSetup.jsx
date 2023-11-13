@@ -28,7 +28,6 @@ const useSocketSetup = (setFriendList, setMessages, socket) => {
     });
     socket.on("connect_error", (err) => {
       console.log("connect_error", err)
-      setUser({ loggedIn: false });
     });
     return () => {
       socket.off("connect_error");
