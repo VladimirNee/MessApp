@@ -1,0 +1,25 @@
+services:
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+  db:
+    image: postgres:16
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: messapp
+      
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  # migrate:
+  #   image: migrate/migrate:4
+  #   volumes:
+  #     - ./migrations:/migrations
+  #   command: [ "-path", "/migrations", "-database",  "postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@db:${DATABASE_PORT}/${DATABASE_NAME}?sslmode=disable", "up" ]
+  #   restart: on-failure
