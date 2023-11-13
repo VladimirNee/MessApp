@@ -12,7 +12,7 @@ const {
   authorizeUser,
   dm,
 } = require("./controllers/socketController");
-const pool = require("./db");
+
 const redisClient = require("./redis");
 const server = require("http").createServer(app);
 
@@ -50,6 +50,5 @@ setInterval(() => {
   if (process.env.NODE_ENV !== "production") {
     return;
   }
-  pool.query("DELETE FROM users u where u.username != $1", ["lester"]);
   redisClient.flushall();
 }, resetEverythingInterval);
